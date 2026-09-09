@@ -17,7 +17,7 @@ local_storage_exercise is a small exercise designed to explain what Local Storag
 
 ## Project Status
 
-> **Current Status:** In Progress
+> **Current Status:** Finalized
 <!--
 PROJECT STATUS:
 Update only the "Current Status" and the text above whenever the project progresses.
