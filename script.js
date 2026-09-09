@@ -1,16 +1,16 @@
-let myData = ['Banana','not Banana', 'Apple'];
+let myData = ['Banana', 'not Banana', 'Apple'];
 
-function init(){
+function init() {
     getFromLocalStorage();
-    render()
+    render();
 }
 
 
 
-function saveData(){
+function saveData() {
     let inputRef = document.getElementById('data_input');
 
-    if(inputRef.value != ""){
+    if (inputRef.value != "") {
         myData.push(inputRef.value);
     }
 
@@ -21,16 +21,21 @@ function saveData(){
 }
 
 
-function saveToLocalStorage(){
+function saveToLocalStorage() {
     localStorage.setItem("myData", JSON.stringify(myData));
 }
 
 
 function getFromLocalStorage() {
+    let myArray = JSON.parse(localStorage.getItem("myData"));
+
+    if (myArray != null) {
+        myData = myArray;
+    }
 }
 
 
-function render(){
+function render() {
     let contentRef = document.getElementById('content');
     contentRef.innerHTML = "";
 
